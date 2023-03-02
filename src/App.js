@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useLayoutEffect, useState } from "react"
+import Root from "./Components/Root/index"
+import Links from "./Components/Links/index"
+import './index.css';
 
 function App() {
+
+  useLayoutEffect(() => {
+    // fetch(`https://countryapi.io/api/capital/berlin`)
+    //   .then((response) => response.json())
+    //   .then(json => {
+    //     setCountries(json)
+    //   })
+    // fetch()
+  }, []);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{textAlign: 'center'}}>BYU World Factbook</h1>
+      <Links />
+      <Root />
     </div>
-  );
+  )
 }
 
 export default App;
